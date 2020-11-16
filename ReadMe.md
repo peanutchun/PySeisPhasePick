@@ -1,7 +1,5 @@
 # **PySeisPhasePick** 配置及使用教程
-> Peanut，构造物理课题组，SYSU
->
-> Bilibili: https://space.bilibili.com/38661434
+> Peanut是我啊，构造物理课题组，SYSU
 
 **一款简单的辅助拾取震相程序**
 
@@ -15,7 +13,7 @@
 ## 一、PySeisPhasePick 运行配置
 以Windows平台为例
 - 需要下载的软件
-    - Anacinda/Miniconda 科学计算环境
+    - Anaconda/Miniconda 科学计算环境
     - NodeJs JS环境
 - 使用到的工具
     - conda
@@ -23,7 +21,7 @@
     - jupyter lab
 
 ### 环境配置
-**Anacinda/Miniconda：**https://docs.conda.io/en/latest/miniconda.html
+**Anaconda/Miniconda：**https://docs.conda.io/en/latest/miniconda.html
 
 这次演示使用Miniconda
 
@@ -117,7 +115,7 @@ conda activate seisphase
     - `[@aquirdturtle/collapsible_headings](https://github.com/aquirdTurtle/Collapsible_Headings)`
 
 ## PySeisPhasePick 使用教程
-- 下载ipynb文件：
+- 下载V3.0_PySeisPhasePick.ipynb文件：https://github.com/peanutchun/PySeisPhasePick/tree/master/ 保存在JupyterLab的默认启动位置
 - 准备/复制地震数据
 - 修改必要参数，默认地震数据放在同一地震事件的文件夹中
     - SeisFolders：包含地震数据的总文件夹
@@ -136,29 +134,30 @@ values = sorted(items, key=lambda x: int(x.split(".")[-2]))
 
 #### 界面介绍
 - 顶部窗口，可点击折叠
-    - 选择地震事件，可任意切换
-    - 选择台站，可任意切换
-    - 选择模式)
-        - Auto Loop：点击`Previous & Next`可自动在Event/Station列表中循环切换，但不会自动跳出
-        - Auto Plot：功能同上述相同，但会在输出文件夹内生成包含当前算法及震相初至位置的对比标示图
-        - Manual：不会进行任何操作
+<img src="figure\选择窗口.gif"  style="zoom:50%;" />
+- 选择地震事件，可任意切换
+- 选择台站，可任意切换
+- 选择模式)
+    - Auto Loop：点击`Previous & Next`可自动在Event/Station列表中循环切换，但不会自动跳出
+    - Auto Plot：功能同上述相同，但会在输出文件夹内生成包含当前算法及震相初至位置的对比标示图
+    - Manual：不会进行任何操作
 
 #### 界面介绍
 - 中间窗口，显示原始数据，点击可折叠
-    - 展示原始地震数据，滑动条及数字框可调整X轴相对位置
-    - Previous & Next： 切换选择的事件/台站，并即时更新左侧事件波形
-    - Reset：重置中部数据窗口及底部算法窗口的X轴索引
-    - Ignore：未实现
-    - Mode：设置当前的切换模式是事件/台站
-    - Apply：读取当前所标定的震相初至位置，并写入到输出目录中去
+<img src="figure\展示数据.gif"  style="zoom:50%;" />
+- 展示原始地震数据，滑动条及数字框可调整X轴相对位置
+- Previous & Next： 切换选择的事件/台站，并即时更新左侧事件波形
+- Reset：重置中部数据窗口及底部算法窗口的X轴索引
+- Ignore：未实现
+- Mode：设置当前的切换模式是事件/台站
+- Apply：读取当前所标定的震相初至位置，并写入到输出目录中去
+  
 
 #### 界面介绍
+<img src="figure\调整算法.gif"  style="zoom:50%;" />
 - 底部窗口，5种初至拾取算法：https://docs.obspy.org/master/tutorial/code_snippets/trigger_tutorial.html
-    - 可实时调整相关参数
-    - Trigger参数方法未事件，但不会影响算法结果
-    
-
-<img src="figure\初至拾取算法.png"  style="zoom:50%;" />
+- 可实时调整相关参数
+- Trigger参数方法未事件，但不会影响算法结果
 
 #### 功能
 - 鼠标拖动滑动条，实时更新原始数据波形图 及 算法数据波形
