@@ -1,5 +1,7 @@
 # **PySeisPhasePick** 配置及使用教程
-> Peanut是我啊，构造物理课题组，SYSU
+> Peanut，构造物理课题组，SYSU
+>
+> Bilibili: https://space.bilibili.com/38661434
 
 **一款简单的辅助拾取震相程序**
 
